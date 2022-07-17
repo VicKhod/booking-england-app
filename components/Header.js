@@ -1,14 +1,28 @@
+import styles from '../styles/Header.module.scss';
+import Image from 'next/image';
+
 const Header = () => (
-    <>
-        <nav>
-        <h5>About</h5>
-        <h5>Contact</h5>
-        <h4>Camping.</h4>
-        <h5>Sign In</h5>
-        <h5>Sign Up</h5>
-        </nav>
-        <div></div>
-    </>
+    <div className={styles.header}>
+        <div className={styles.nav}>
+
+            <div className={styles.nav__left}>
+                <h5>About</h5>
+                <h5>Contact</h5>
+            </div>
+
+            <h3>Camping.</h3>
+            
+            <div className={styles.nav__right}>
+                <h5>Sign In</h5>
+                <h5>Sign Up</h5>
+                <div className={styles.search}> 
+                    <img src='/search-line.png'></img>
+                </div>
+            </div>
+
+        </div>       
+        <div className={styles.border}></div>
+    </div>
 );
 
 export default Header;

@@ -1,0 +1,38 @@
+.header {
+    margin: 43px 240px 0 240px;
+
+    .nav {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 35%;
+                
+        .nav__left, .nav__right{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+        }
+
+        h5 {
+           font-size: 18px;
+           line-height: 21px;
+        }
+
+        h3 {
+            display: block;
+            font-size: 24px;
+            line-height: 29px;
+        }
+
+        .search {
+           width: 24px;
+           height: 24px;
+        }
+    }
+    
+    .border {
+        border-bottom: solid 1px #E7E7F2;
+        width: 100%;
+        opacity: 0.4;
+    }
+}
