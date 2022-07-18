@@ -21,7 +21,7 @@ const Header = () => (
             </div>
 
         </div>       
-        <div className={styles.border}></div>
+        <hr className={styles.border}></hr>
     </div>
 );
 

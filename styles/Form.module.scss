@@ -1,0 +1,79 @@
+%formcolumns {
+    width: 100%;
+    // background-color: #4b2e2e;
+    // border: 1px solid #fff;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    height: 72px;
+    display: grid;
+    justify-items: stretch;
+}
+
+%input {
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.parent__container {
+    margin-left: 240px;
+    margin-right: 240px;
+    width: 80%;
+    height: 201px;
+    position: absolute;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(70px);
+    border-radius: 20px 20px 0px 0px;    
+}
+
+.container {
+    margin:48px;
+
+    .container__title{
+        font-size: 18px;
+        line-height: 21px;
+        mix-blend-mode: normal;
+    }
+    
+    .booking {
+        display: flex;
+
+        .address, .data_1, .data_2, .guests{
+            @extend %formcolumns
+        }
+
+        img {
+            width: 21px;
+            height: 21.85px;
+            opacity: 0.7;
+        }
+
+        select, input {
+            @extend %input;
+        }
+        
+        
+        .data_1 ::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
+        .data_2 ::-webkit-calendar-picker-indicator {
+            opacity: 0;
+        }
+        
+        .btn {
+            width: 240px;
+            height: 72px;
+            background-color: #91CB82;
+            border-radius: 10px;
+            border: none;
+            font-size: 18px;
+            line-height: 20px;  
+            color: #fff;
+        }
+    }
+
+}
+
