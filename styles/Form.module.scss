@@ -1,9 +1,9 @@
 %formcolumns {
     width: 100%;
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(231, 231, 242, 0.3);
     height: 72px;
     display: grid;
-    justify-items: stretch;
+    grid-template-areas: a a a, b c c, b c c ;
 }
 
 %input {
@@ -18,7 +18,7 @@
 .parent__container {
     margin-left: 240px;
     margin-right: 240px;
-    width: 80%;
+    width: 76%;
     height: 201px;
     position: absolute;
     bottom: 0;
@@ -29,6 +29,7 @@
 
 .container {
     margin:48px;
+    width: 1440px;
 
     .container__title{
         font-size: 18px;
@@ -39,10 +40,20 @@
     .booking {
         display: flex;
 
-        .address, .data_1, .data_2, .guests{
-            @extend %formcolumns
+        .data_1, .data_2{
+            @extend %formcolumns;
+        }
+        .address {
+            @extend %formcolumns;
+            border-radius: 10px 0 0 10px;
+        }
+        .guests {
+            @extend %formcolumns;
+            border-radius:  0 10px 10px 0 ;
+
         }
         img {
+            grid-area: b;
             order: -1;
             margin-right: 0,25em;
             width: 21px;
@@ -50,10 +61,11 @@
             opacity: 0.7;
         }
         label {
-            display: flex;
+            grid-area: a;
         }
 
         select, input {
+            grid-area: c;
             @extend %input;
         }
         

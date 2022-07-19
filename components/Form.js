@@ -53,7 +53,7 @@ const Form = () => (
             <img src="/user.png" />
           </label>
           <select id="select__guests">
-            <option defaultValue="value_1" defaultValue>
+            <option defaultValue="value_1">
               4 adults
             </option>
             <option defaultValue="value_2">4 adults with kids</option>
