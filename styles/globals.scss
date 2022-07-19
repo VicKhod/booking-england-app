@@ -1,15 +1,47 @@
+@import "/styles/media_breackpoints.scss";
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: #FFFFFF;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
   background: linear-gradient(180deg, rgba(65, 66, 99, 0.35), rgba(58, 58, 58, 0.2) ), url(../public/background.png) no-repeat;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: top;
-  
+}
+
+@include desktop {
+  Header {
+    max-width: 970px;
+  }
+}
+@include laptop {
+  Header {
+    max-width: 750px;
+  }
+}
+@include tablet {
+  Header {
+    max-width: none;
+  }
+}
+
+@include desktop {
+  Home {
+    max-width: 970px;
+  }
+}
+@include laptop {
+  Home {
+    max-width: 750px;
+  }
+}
+@include tablet {
+  Home {
+    max-width: none;
+  }
 }
 

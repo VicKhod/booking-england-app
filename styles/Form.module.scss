@@ -1,30 +1,23 @@
-%formcolumns { 
-    display: grid;
-    grid-template-areas: 
-    "a b"
-    "a b";
-    grid-template-columns: 28px 1fr;
-    align-items: center;
-    width: 100%;
-    border: 1px solid rgba(231, 231, 242, 0.3);
-}
-
 %input {
     background: none;
     outline: none;
     border: none;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 30px;
     color: #fff;
+    margin-left: 20px;
+    flex: 1 1 100%;
+    display: block;
 }
 
+
 .parent__container {
-    margin-left: 240px;
-    margin-right: 240px;
-    width: 76%;
-    height: 201px;
-    position: absolute;
-    bottom: 0;
+    margin: 0 240px 0 240px;
+    max-width: 76%;
+    min-height: 201px;
+    // position: absolute;
+    // bottom: 0;
+
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(70px);
     border-radius: 20px 20px 0px 0px;    
@@ -32,7 +25,6 @@
 
 .container {
     margin:48px;
-    width: 1440px;
 
     .container__title{
         font-size: 18px;
@@ -42,40 +34,54 @@
     
     .booking {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+        align-items: center;
 
-        .data_1, .data_2{
-            @extend %formcolumns;
+        .cell {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex: 0 1 auto;
+            min-height: 72px;
+            border: 1px solid rgba(231, 231, 242, 0.3);
+        }
+        .form_input_wrap {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1 1 auto;
+        }
+        img {
+            opacity: 0.7;
+            max-width: 28px;
+            max-height: 28px;
+            margin-left: 20px;
         }
         .address {
-            @extend %formcolumns;
             border-radius: 10px 0 0 10px;
         }
         .guests {
-            @extend %formcolumns;
             border-radius:  0 10px 10px 0 ;
         }
-
-        img {
-            opacity: 0.7;
-            width: 28px;
-            height: 28px;
-            grid-area: a;
-            grid-row: span 2;
-        }
-        select, input {
+        label, select, input {
             @extend %input;
         }
+        input {
+            line-height: normal;
+            margin-right: 5px;
+        }
         
-        .data_1 ::-webkit-calendar-picker-indicator {
-            opacity: 0;
-        }
-        .data_2 ::-webkit-calendar-picker-indicator {
-            opacity: 0;
-        }
+        // .data_1 ::-webkit-calendar-picker-indicator {
+        //     opacity: 0;
+        // }
+        // .data_2 ::-webkit-calendar-picker-indicator {
+        //     opacity: 0;
+        // }
         
         .btn {
-            width: 240px;
-            height: 72px;
+            margin-left: 30px;
+            min-width: 240px;
+            min-height: 72px;
             background-color: #91CB82;
             border-radius: 10px;
             border: none;
@@ -86,4 +92,3 @@
     }
   
 }
-
