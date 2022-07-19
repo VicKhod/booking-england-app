@@ -1,9 +1,12 @@
-%formcolumns {
+%formcolumns { 
+    display: grid;
+    grid-template-areas: 
+    "a b"
+    "a b";
+    grid-template-columns: 28px 1fr;
+    align-items: center;
     width: 100%;
     border: 1px solid rgba(231, 231, 242, 0.3);
-    height: 72px;
-    display: grid;
-    grid-template-areas: a a a, b c c, b c c ;
 }
 
 %input {
@@ -50,25 +53,18 @@
         .guests {
             @extend %formcolumns;
             border-radius:  0 10px 10px 0 ;
-
         }
+
         img {
-            grid-area: b;
-            order: -1;
-            margin-right: 0,25em;
-            width: 21px;
-            height: 21.85px;
             opacity: 0.7;
-        }
-        label {
+            width: 28px;
+            height: 28px;
             grid-area: a;
+            grid-row: span 2;
         }
-
         select, input {
-            grid-area: c;
             @extend %input;
         }
-        
         
         .data_1 ::-webkit-calendar-picker-indicator {
             opacity: 0;
@@ -88,6 +84,6 @@
             color: #fff;
         }
     }
-
+  
 }
 
