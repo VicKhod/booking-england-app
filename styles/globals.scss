@@ -1,7 +1,7 @@
-@import "/styles/media_breackpoints.scss";
-
 html,
 body {
+  max-width: 1980px;
+  max-height: 1080px;
   padding: 0;
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -12,36 +12,3 @@ body {
   background-attachment: fixed;
   background-position: top;
 }
-
-@include desktop {
-  Header {
-    max-width: 970px;
-  }
-}
-@include laptop {
-  Header {
-    max-width: 750px;
-  }
-}
-@include tablet {
-  Header {
-    max-width: none;
-  }
-}
-
-@include desktop {
-  Home {
-    max-width: 970px;
-  }
-}
-@include laptop {
-  Home {
-    max-width: 750px;
-  }
-}
-@include tablet {
-  Home {
-    max-width: none;
-  }
-}
-

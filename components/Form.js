@@ -1,5 +1,4 @@
 import styles from "../styles/Form.module.scss";
-import "../styles/Form-media.module.scss";
 
 const Form = () => (
   <div className={styles.parent__container}>
@@ -10,7 +9,7 @@ const Form = () => (
 
             <div className={styles.address+ ' ' + styles.cell}>
                 <img src="/home-line.png" />
-                <div class={styles.form_input_wrap}>
+                <div className={styles.form_input_wrap}>
                     <label>Accommodation</label>
                     <select id="select__address">
                         <option defaultValue="value_1">
@@ -28,7 +27,7 @@ const Form = () => (
 
             <div className={styles.data_1+ ' ' + styles.cell}>
                 <img src="/calendar-line.png" />
-                <div class={styles.form_input_wrap}>
+                <div className={styles.form_input_wrap}>
                     <label>Check-in</label>
                     <input
                         type="date"
@@ -42,7 +41,7 @@ const Form = () => (
             </div>
 
             <div className={styles.data_2+ ' ' + styles.cell}>
-                <div class={styles.form_input_wrap}>
+                <div className={styles.form_input_wrap}>
                     <label>Check-out</label>
                     <input
                         type="date"
@@ -57,7 +56,7 @@ const Form = () => (
 
             <div className={styles.guests+ ' ' + styles.cell}>
                 <img src="/user.png" />
-                <div class={styles.form_input_wrap}>
+                <div className={styles.form_input_wrap}>
                     <label>Guests</label>
                     <select id="select__guests">
                         <option defaultValue="value_1">
