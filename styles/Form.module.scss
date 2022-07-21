@@ -1,3 +1,5 @@
+@import "/styles/adaptive/breackpoints.scss";
+
 %input {
     background: none;
     outline: none;
@@ -15,7 +17,7 @@
     margin: 0 240px 0 240px;
     max-width: 76%;
     min-height: 201px;
-    position: absolute;
+    position: relative;
     bottom: 0;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(70px);
@@ -65,17 +67,13 @@
         label, select, input {
             @extend %input;
         }
+        select:hover {
+            background-color: black;
+        }
         input {
             line-height: normal;
             margin-right: 5px;
         }
-        
-        // .data_1 ::-webkit-calendar-picker-indicator {
-        //     opacity: 0;
-        // }
-        // .data_2 ::-webkit-calendar-picker-indicator {
-        //     opacity: 0;
-        // }
         
         .btn {
             margin-left: 30px;
@@ -89,5 +87,15 @@
             color: #fff;
         }
     }
-  
+}
+
+@include tablet {
+    .parent__container {
+        margin: 0;
+        width: fit-content;
+    }
+
+    .container {
+        margin: auto;
+    }
 }

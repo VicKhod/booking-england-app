@@ -1,18 +1,21 @@
+@import "/styles/adaptive/breackpoints.scss";
+
 .home {
   display: flex;
+  flex-wrap: row wrap;
   align-items: center;
-  margin-top: 314px;
+  justify-content: flex start;
 }
 
 .title {
-  margin-left: 240px;
+  flex: 0 0 100%;
+  margin-bottom: 191px;
 
   h1 {
-    max-width: 860px;
-    min-height: 212px;
+    margin-bottom: 32px;
     font-style: normal;
     font-weight: 900;
-    font-size: 96px;
+    font-size: 80px;
     line-height: 110%;
     letter-spacing: 0.01em;
   }
@@ -24,9 +27,11 @@
 }
 
 .card {
-  position: absolute;
+  flex: 0 0 100%;
+  position: sticky;
   right: 0;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   max-width: 570px;
   max-height: 400px;
@@ -39,7 +44,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin-left: 36px;
+    margin: 36px;
 
     p{
       font-size: 20px;
@@ -54,8 +59,28 @@
     .arrow {
       opacity: 0.8;
     }
+    
   }
 
 }
 
- 
+@include tablet {
+  .home {
+    flex-direction: column;
+  
+    .title {
+      h1 {
+        font-size: 50px;
+        margin-bottom: 18px;
+      }
+      p {
+        font-size: 17px;
+      }
+    }
+
+    .card {
+      justify-content: flex-end;
+      margin-bottom: 18px;
+    }
+  }
+}
