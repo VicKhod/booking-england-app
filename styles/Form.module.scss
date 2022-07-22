@@ -4,8 +4,8 @@
     background: none;
     outline: none;
     border: none;
-    font-size: 16px;
-    line-height: 30px;
+    font-size: 13px;
+    line-height: 20px;
     color: #fff;
     margin-left: 20px;
     flex: 1 1 100%;
@@ -14,9 +14,12 @@
 
 
 .parent__container {
-    margin: 0 240px 0 240px;
-    max-width: 76%;
-    min-height: 201px;
+    margin: 0 auto 0 auto;
+    display: block;
+
+    padding: 15px;
+    max-width: 100%;
+    min-height: 150px;
     position: relative;
     bottom: 0;
     background: rgba(255, 255, 255, 0.15);
@@ -25,16 +28,18 @@
 }
 
 .container {
-    margin: 0 auto 0 auto;
+    // margin: 0 auto 0 auto;
 
     .container__title {
         font-size: 18px;
         line-height: 21px;
         mix-blend-mode: normal;
+        margin: 0 0 15px 0;
     }
     
     .booking {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: start;
         align-items: center;
@@ -44,7 +49,7 @@
             justify-content: space-between;
             align-items: center;
             flex: 0 1 auto;
-            min-height: 72px;
+            min-height: 50px;
             border: 1px solid rgba(231, 231, 242, 0.3);
         }
         .form_input_wrap {
@@ -59,10 +64,13 @@
             margin-left: 20px;
         }
         .address {
-            border-radius: 10px 0 0 10px;
+            border-radius: 10px 0 0 0;
+        }
+        .data_2 {
+            border-radius: 0 10px 10px 0;
         }
         .guests {
-            border-radius:  0 10px 10px 0 ;
+            border-radius:  0 10px 10px 10px ;
         }
         label, select, input {
             @extend %input;
@@ -76,9 +84,9 @@
         }
         
         .btn {
-            margin-left: 30px;
+            margin-left: 50px;
             min-width: 240px;
-            min-height: 72px;
+            min-height: 50px;
             background-color: #91CB82;
             border-radius: 10px;
             border: none;
