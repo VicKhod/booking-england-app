@@ -25,9 +25,9 @@
 }
 
 .container {
-    margin:48px;
+    margin: 0 auto 0 auto;
 
-    .container__title{
+    .container__title {
         font-size: 18px;
         line-height: 21px;
         mix-blend-mode: normal;
@@ -68,7 +68,7 @@
             @extend %input;
         }
         select:hover {
-            background-color: black;
+            background-color: rgba(86, 86, 86, 0.708);
         }
         input {
             line-height: normal;
@@ -91,11 +91,44 @@
 
 @media (max-width: 720px) {
     .parent__container {
-        margin: 0;
-        width: fit-content;
+        margin: 0 auto 0 auto;
+        padding: 15px;
+        border-radius: 10px 10x 0px 0px;
     }
 
     .container {
-        margin: auto;
+
+        .container__title {
+            text-align: center;
+            margin: 0 0 15px 0;
+        }
+
+        .booking {
+            justify-content: center;
+
+            .cell {
+                min-height: 50px;
+                width: 80%;
+                flex: 0 2 auto;
+            }
+            .form_input_wrap {
+                flex: 0 1 auto;
+            }
+            .address {
+                border-radius: 10px 10px 0 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: pre-line;
+            }
+            .guests {
+                border-radius: 0 0 10px 10px;
+            }
+            .btn {
+                margin: 10px 0 0 0;
+                min-width: 80%;
+                min-height: 52px;
+            }
+        }
     }
+
 }

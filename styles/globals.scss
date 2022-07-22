@@ -10,7 +10,7 @@
 html,
 body {
   max-width: 1200px;
-  max-height: 1200px;
+  min-height: 600px;
   display: block;
   // margin-top: 43px;
   margin-left: auto;
@@ -29,10 +29,10 @@ body {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   html,
   body {
-    max-width: 768px;
-    max-height: 1024px;
+    max-width: 720px;
+    // min-height: 600px;
   }
 }
