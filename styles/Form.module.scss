@@ -1,4 +1,4 @@
-@import "/styles/breackpoints.scss";
+// @import "/styles/breackpoints.scss";
 
 %input {
     background: none;
@@ -89,7 +89,7 @@
     }
 }
 
-@include tablet {
+@media (max-width: 720px) {
     .parent__container {
         margin: 0;
         width: fit-content;

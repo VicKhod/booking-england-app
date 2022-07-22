@@ -1,4 +1,4 @@
-@import "/styles/breackpoints.scss";
+// @import "/styles/breackpoints.scss";
 
 .home {
   display: flex;
@@ -64,7 +64,7 @@
 
 }
 
-@include tablet {
+@media (max-width: 720px) {
   .home {
     flex-direction: column;
   

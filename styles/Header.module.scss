@@ -1,4 +1,4 @@
-@import "/styles/breackpoints.scss";
+// @import "/styles/breackpoints.scss";
 
 .container {
     max-width: 100%;
@@ -62,7 +62,7 @@
     }
 }
 
-@include tablet {
+@media (max-width: 720px) {
     .container {
         max-width: 100%;
         margin-bottom: 150px;

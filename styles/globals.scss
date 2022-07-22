@@ -1,4 +1,4 @@
-@import "/styles/breackpoints.scss";
+// @import "/styles/breackpoints.scss";
 
 *, *:before, *:after{
   padding: 0;
@@ -29,7 +29,7 @@ body {
   }
 }
 
-@include tablet {
+@media (max-width: 720px) {
   html,
   body {
     max-width: 768px;
